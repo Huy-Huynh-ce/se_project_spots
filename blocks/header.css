@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 0 20px 0;
+  border-bottom: solid 1px;
+}
+
+.avatar_section {
+  display: flex;
+  gap: 20px;
+}
+
+.avatar {
+  width: 190px;
+  height: 190px;
+}
+
+.name_description_edit {
+  display: flex;
+  flex-direction: column;
+}
+
+.name_descrption {
+  margin: 0 0 12px;
+}
+
+.name_description_subtile {
+  margin: 0 0 114px;
+}
+
+.edit_button {
+  border-style: none;
+  background: white;
+  display: flex;
+  padding: 0;
+}
+
+.new_post {
+  width: 149px;
+  height: 52px;
+  margin: 138px 0 0 0;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  display: flex;
+  gap: 8px;
+  padding: 18px 24px 18px 0;
+}
+
+.new_post_icon_plus {
+  padding: 0 0 0 32px;
+}
