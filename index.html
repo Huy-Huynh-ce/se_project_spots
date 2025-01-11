@@ -11,7 +11,9 @@
   </head>
   <body>
     <div class="page">
-      <img src="./images/menubar.svg" alt="spot logo" class="menubar" />
+      <div class="menubar">
+        <img src="./images/menubar.svg" alt="spot logo" class="menubar_logo" />
+      </div>
       <header class="header">
         <div class="avatar_section">
           <img
@@ -20,7 +22,7 @@
             class="avatar"
           />
           <div class="name_description_edit">
-            <h1 class="name_descrption">Bessie Coleman</h1>
+            <h1 class="name_description">Bessie Coleman</h1>
             <p class="name_description_subtile">Civil Aviator</p>
             <button class="edit_button">
               <img src="./images/edit_profile_icon.svg" alt="pencil icon" />
@@ -28,16 +30,26 @@
             </button>
           </div>
         </div>
-        <button class="new_post">
+        <button class="new_post-button">
           <img
             src="./images/new_post_icon.svg"
             alt="plus sign"
-            class="new_post_icon_plus"
+            class="new_post_icon-plus"
           />
           New Post
         </button>
       </header>
-      <main class="content"></main>
+      <main class="content">
+        <ul class="cards">
+          <li class="card">
+            <img src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg" alt="a picture of a snowy mountain and house through a window view" class="card_image">
+            <li class="card_image-description">
+              <h2 class="card_description">Val Thorens</h2>
+              <img src="./images/card_like_icon.png" alt="heart icon" class="like_icon">
+            </li>
+          </li>
+        </ul>
+      </main>
       <footer class="footer"></footer>
     </div>
   </body>
