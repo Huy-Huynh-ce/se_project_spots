@@ -1,0 +1,9 @@
+@media screen and (min-width: 320) {
+  .header {
+    max-width: 100%;
+  }
+
+  .avatar {
+    flex-direction: column;
+  }
+}
