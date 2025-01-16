@@ -26,6 +26,13 @@
   font-size: 32px;
   line-height: 32px;
   color: #212121;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
 }
 
 .avatar__description {
@@ -36,6 +43,13 @@
   line-height: 16px;
   opacity: 70%;
   color: #212121;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
 }
 
 .avatar__left-button {
@@ -97,6 +111,23 @@
     margin: 12px 0 0;
     font-size: 20px;
     line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-clamp: 3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 288px;
+  }
+
+  .avatar__description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-clamp: 3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 420px;
   }
 
   .avatar__left-button {
@@ -111,5 +142,7 @@
   .avatar__right-button {
     margin: 0;
     margin: 20px 0;
+    width: 100%;
+    justify-content: center;
   }
 }
