@@ -3,3 +3,9 @@
   max-width: 1280px;
   margin: auto;
 }
+
+/* @media screen and (max-width: 676px) {
+  .content {
+    width: 288px;
+  }
+} */

@@ -1,10 +1,16 @@
 .header {
   display: flex;
   justify-content: center;
-  color: #fff;
+  background-color: #fff;
   opacity: 80%;
 }
 
 .header__logo {
   margin: auto;
+}
+
+@media screen and (max-width: 676px) {
+  .header__logo {
+    height: 46px;
+  }
 }
