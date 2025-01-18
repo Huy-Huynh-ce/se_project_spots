@@ -3,13 +3,15 @@
   gap: 20px;
   margin: 0 auto;
   padding: 34px 0 20px 0;
-  border-bottom: solid 1px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.7);
   max-width: 1280px;
 }
 
 .avatar__image {
   width: 190px;
   height: 190px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .avatar__column {
@@ -36,7 +38,8 @@
 }
 
 .avatar__description {
-  margin: 0 0 114px;
+  margin: 0;
+  padding: 0 0 114px;
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -52,13 +55,13 @@
   max-width: 420px;
 }
 
-.avatar__left-button {
+.avatar__edit-btn {
   border-style: none;
   background-color: #fcf5e5;
   font-family: "Poppins", Arial, sans-serif;
   display: flex;
   padding: 0;
-  margin: 0;
+  margin: auto 0;
   opacity: 70%;
   color: #212121;
   gap: 8px;
@@ -67,7 +70,12 @@
   line-height: 16px;
 }
 
-.avatar__right-button {
+.avatar__edit-btn:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+.avatar__new-post-btn {
   width: 149px;
   height: 52px;
   margin: 138px 0 0 auto;
@@ -83,7 +91,14 @@
   line-height: 16px;
 }
 
-.avatar__right-button-icon {
+.avatar__new-post-btn:hover {
+  cursor: auto;
+  cursor: pointer;
+  background-color: #212121;
+  opacity: 980%;
+}
+
+.avatar__new-post-btn-icon {
   width: 12px;
   height: 12px;
 }
@@ -93,8 +108,9 @@
     flex-direction: column;
     align-items: center;
     max-width: 288px;
-    padding: 0;
+    padding: 20px 0;
     gap: 0;
+    border-bottom: 1px solid rgba(33, 33, 33, 0.4);
   }
 
   .avatar__image {
@@ -108,29 +124,19 @@
   }
 
   .avatar__name {
+    text-align: center;
     margin: 12px 0 0;
     font-size: 20px;
     line-height: 20px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    line-clamp: 3;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
     max-width: 288px;
   }
 
   .avatar__description {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    line-clamp: 3;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    text-align: center;
     max-width: 420px;
   }
 
-  .avatar__left-button {
+  .avatar__edit-btn {
     margin: 32px 0 0;
   }
 
@@ -139,7 +145,7 @@
     padding: 0;
   }
 
-  .avatar__right-button {
+  .avatar__new-post-btn {
     margin: 0;
     margin: 20px 0;
     width: 100%;

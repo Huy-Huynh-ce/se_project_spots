@@ -2,15 +2,9 @@
   display: flex;
   justify-content: center;
   background-color: #fff;
-  opacity: 80%;
+  padding: 10px 0;
 }
 
 .header__logo {
   margin: auto;
-}
-
-@media screen and (max-width: 676px) {
-  .header__logo {
-    height: 46px;
-  }
 }
