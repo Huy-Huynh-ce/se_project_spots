@@ -1,7 +1,6 @@
 .cards {
-  border-bottom: 1px solid rgba(33, 33, 33, 0.7);
+  border-bottom: 1px solid #21212166;
   padding-bottom: 40px;
-  border-color: #212121;
 }
 
 .cards__list {
@@ -16,7 +15,6 @@
 
 @media screen and (max-width: 627px) {
   .cards {
-    border-bottom: 1px solid rgba(33, 33, 33, 0.7);
     padding-bottom: 20px;
   }
 
