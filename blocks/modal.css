@@ -11,6 +11,7 @@
   align-items: center;
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
+  padding: 10px;
 }
 
 .modal_is-open {
@@ -64,6 +65,7 @@
   margin: 8px 0 0;
   width: 100%;
   padding: 16px 12px;
+
   border-radius: 8px;
   border: 1px solid #21212166;
   opacity: 40%;
@@ -85,4 +87,24 @@
   padding: 18px 58px;
   font-size: 16px;
   max-width: 156px;
+}
+
+@media screen and (max-width: 676px) {
+  .modal__title {
+    font-size: 20px;
+    margin: 0 0 24px;
+  }
+
+  .modal__submit-button {
+    max-width: none;
+    width: 100%;
+  }
+
+  .modal__label {
+    margin: 0 0 24px;
+  }
+
+  .modal__input::placeholder {
+    font-size: 16px;
+  }
 }
