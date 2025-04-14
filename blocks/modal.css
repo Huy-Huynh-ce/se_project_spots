@@ -1,5 +1,7 @@
 .modal {
   visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
   background-color: #0000080;
   position: fixed;
   top: 0;
@@ -16,6 +18,9 @@
 
 .modal_is-open {
   visibility: visible;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
 }
 
 .modal__container {
@@ -43,6 +48,7 @@
 
 .modal__close-button:hover {
   opacity: 100%;
+  cursor: pointer;
 }
 
 .modal__title {
@@ -73,6 +79,7 @@
 
 .modal__input:hover {
   opacity: 100%;
+  cursor: pointer;
 }
 
 .modal__input::placeholder {
@@ -87,6 +94,10 @@
   padding: 18px 58px;
   font-size: 16px;
   max-width: 156px;
+}
+
+.modal__submit-button:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 676px) {
