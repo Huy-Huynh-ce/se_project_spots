@@ -49,6 +49,7 @@ const cardTemplate = document
   .querySelector("#template")
   .content.querySelector(".card");
 const cardList = document.querySelector(".cards__list");
+
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitleEl = cardElement.querySelector(".card__title");
@@ -57,6 +58,12 @@ function getCardElement(data) {
   cardTitleEl.alt = data.name;
   cardTitleEl.textContent = data.name;
   cardImageEl.src = data.link;
+
+  const cardLikeBtnEl = cardElement.querySelector(".card__like-button");
+
+  cardLikeBtnEl.addEventListener("click", () => {
+    cardLikeBtnEl.classList.toggle("card__like-button-active");
+  });
 
   return cardElement;
 }
@@ -72,36 +79,40 @@ editProfileBtn.addEventListener("click", function () {
   profileNameInput.value = profileNameEl.textContent;
   profileDescriptionInput.value = profileDescriptionEl.textContent;
   openModal(editProfileModal);
-  //  editProfileModal.classList.add("modal_is-open");
 });
+
 editProfileModalCloseBtn.addEventListener("click", function () {
   closeModal(editProfileModal);
-  //  editProfileModal.classList.remove("modal_is-open");
 });
 
 newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
-  //  newPostModal.classList.add("modal_is-open");
 });
+
 newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
-  //  newPostModal.classList.remove("modal_is-open");
 });
+
 function handleEditProfileForm(Evt) {
   Evt.preventDefault();
   profileNameEl.textContent = profileNameInput.value;
   profileDescriptionEl.textContent = profileDescriptionInput.value;
   closeModal(editProfileModal);
-  //  editProfileModal.classList.remove("modal_is-open");
 }
+
 editProfileForm.addEventListener("submit", handleEditProfileForm);
 
 function handleNewPostForm(evt) {
   evt.preventDefault();
-  console.log(newPostImageLink.value);
-  console.log(newPostCaption.value);
+
+  const newPostInputValue = {
+    name: newPostCaption.value,
+    link: newPostImageLink.value,
+  };
+
+  const cardElememt = getCardElement(newPostInputValue);
+  cardList.prepend(cardElememt);
   closeModal(newPostModal);
-  //  newPostModal.classList.remove("modal_is-open");
 }
 newPostForm.addEventListener("submit", handleNewPostForm);
 
