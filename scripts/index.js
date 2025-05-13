@@ -51,7 +51,7 @@ const newPostCaption = newPostForm.querySelector("#caption");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewCloseBtn = previewModal.querySelector(
-  ".modal__button_type-preview"
+  ".modal__close-button_type-preview"
 );
 const previewImageEl = previewModal.querySelector(".modal__image");
 const previewCaptionEl = previewModal.querySelector(".modal__caption");
@@ -139,6 +139,8 @@ function handleNewPostForm(evt) {
 
   const cardElememt = getCardElement(newPostInputValue);
   cardList.prepend(cardElememt);
+  newPostCaption.value = "";
+  newPostImageLink.value = "";
   closeModal(newPostModal);
 }
 newPostForm.addEventListener("submit", handleNewPostForm);
