@@ -30,24 +30,23 @@ function toggleButtonState(inputList, buttonEl) {
   console.log(isInvalid);
   if (isInvalid) {
     buttonEl.disabled = true;
+    buttonEl.classList.add("modal__submit-button_type-disabled");
   } else {
     buttonEl.disabled = false;
+    buttonEl.classList.remove("modal__submit-button_type-disabled");
   }
 }
 
 const setEventListener = (formEl) => {
   const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
-  const buttonEl = formEl.querySelectorAll(".modal__submit-button");
+  const buttonEl = formEl.querySelector(".modal__submit-button");
 
-  //   console.log(inputList);
-  //   console.log(buttonEl);
-
-  //toggleButtonState(inputList, buttonEl);
+  toggleButtonState(inputList, buttonEl);
 
   inputList.forEach((inputEl) => {
     inputEl.addEventListener("input", () => {
       checkInputValidity(formEl, inputEl);
-      //     toggleButtonState(inputList, buttonEl);
+      toggleButtonState(inputList, buttonEl);
     });
   });
 };

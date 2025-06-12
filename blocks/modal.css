@@ -136,6 +136,11 @@
 
 .modal__submit-button:hover {
   cursor: pointer;
+  background-color: #212121cc;
+}
+
+.modal__submit-button_type-disabled {
+  opacity: 0.5;
 }
 
 .modal__image-container {
