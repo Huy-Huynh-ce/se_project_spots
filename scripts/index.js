@@ -51,7 +51,7 @@ const newPostCloseBtn = newPostModal.querySelector(".modal__close-button");
 const newPostForm = document.forms["new-post-form"];
 const newPostImageLink = newPostForm.querySelector("#image-link");
 const newPostCaption = newPostForm.querySelector("#caption");
-const submitBtn = newPostModal.querySelector(".modal__submit-button");
+const newPostSubmitBtn = newPostModal.querySelector(".modal__submit-button");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewCloseBtn = previewModal.querySelector(
@@ -101,7 +101,7 @@ function getCardElement(data) {
 
 function handleEscape(evt) {
   if (evt.key === "Escape") {
-    const openedModal = document.querySelector(".modal_opened");
+    const openedModal = document.querySelector(".modal_is-open");
     closeModal(openedModal);
   }
 }
@@ -168,8 +168,7 @@ function handleNewPostForm(evt) {
     link: newPostImageLink.value,
   };
 
-  const cardElement = getCardElement(newPostInputValue);
-  cardList.prepend(cardElement);
+  renderCard(newPostInputValue);
   evt.target.reset();
   resetValidation(
     editProfileForm,
@@ -177,7 +176,7 @@ function handleNewPostForm(evt) {
     settings
   );
 
-  disabledButton(submitBtn, settings);
+  disabledButton(newPostSubmitBtn, settings);
   closeModal(newPostModal);
 }
 newPostForm.addEventListener("submit", handleNewPostForm);
