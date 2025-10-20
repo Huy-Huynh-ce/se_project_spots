@@ -1,3 +1,15 @@
+import avatarImg from "../images/avatar.jpg";
+import editIcon from "../images/edit_profile_icon.svg";
+import newPostIcon from "../images/new_post_icon.svg";
+import logo from "../images/logo.svg";
+
+import {
+  enableValidation,
+  settings,
+  resetValidation,
+} from "../scripts/validation.js";
+import "./index.css";
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -29,6 +41,10 @@ const initialCards = [
   },
 ];
 
+document.querySelector(".avatar__image").src = avatarImg;
+document.querySelector(".avatar__edit-btn-icon").src = editIcon;
+document.querySelector(".avatar__new-post-btn-icon").src = newPostIcon;
+document.querySelector(".header__logo").src = logo;
 const editProfileBtn = document.querySelector(".avatar__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileModalCloseBtn = editProfileModal.querySelector(
@@ -189,3 +205,5 @@ function renderCard(item, method = "prepend") {
 initialCards.forEach(function (item) {
   renderCard(item, "append");
 });
+
+enableValidation(settings);

@@ -6,19 +6,22 @@
     <meta name="author" content="Huy Huynh" />
     <meta name="description" content="Spots application" />
     <meta name="keywords" content="Comman, Separated, Keywords" />
-    <link rel="stylesheet" href="./pages/index.css" />
     <link rel="icon" href="favicon.ico" />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/Logo.svg" alt="spot logo" class="header__logo" />
+        <img
+          src="<%= require('./images/logo.svg') %>"
+          alt="spot logo"
+          class="header__logo"
+        />
       </header>
       <main class="content">
         <section class="avatar">
           <img
-            src="./images/avatar.jpg"
+            src="<%= require('./images/avatar.jpg') %>"
             alt="profile picture"
             class="avatar__image"
           />
@@ -27,7 +30,7 @@
             <p class="avatar__description">Civil Aviator</p>
             <button type="button" class="avatar__edit-btn">
               <img
-                src="./images/edit_profile_icon.svg"
+                src="<%= require('./images/edit_profile_icon.svg') %>"
                 alt="pencil icon"
                 class="avatar__edit-btn-icon"
               />Edit Profile
@@ -36,7 +39,7 @@
 
           <button type="button" class="avatar__new-post-btn">
             <img
-              src="./images/new_post_icon.svg"
+              src="<%= require('./images/new_post_icon.svg') %>"
               alt="plus icon"
               class="avatar__new-post-btn-icon"
             />
@@ -140,7 +143,5 @@
         </div>
       </div>
     </div>
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/validation.js"></script>
   </body>
 </html>
